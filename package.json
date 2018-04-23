@@ -1,0 +1,26 @@
+{
+  "name": "bowling",
+  "version": "1.0.0",
+  "description": "App to track bowling scores in multiple leagues",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reyespinosa3/Bowling.git"
+  },
+  "author": "Rey Espinosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reyespinosa3/Bowling/issues"
+  },
+  "homepage": "https://github.com/reyespinosa3/Bowling#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.16"
+  }
+}
