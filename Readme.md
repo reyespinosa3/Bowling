@@ -11,20 +11,21 @@ The Multiple Bowling League Score Tracker is an app that will provide one place 
 ## Wireframes
 ---
 ### Home Page
-![alt text]https://i.imgur.com/H1bCMMK.png
+![alt text](https://i.imgur.com/H1bCMMK.png)
 ### By League Page
 
 ### By Game Page
 
 ## Routes
 ---
-URL | HTTP Verb | Action | Description
-home | GET | SHOW | Shows Log In and Sign Up
-user/new | POST | CREATE | Create New User Account
-user/:id | GET | SHOW | Shows User Account
-user/league | GET | SHOW | Shows User leagues
-user/league/new | POST | CREATE | Create New League
-user/games | GET | SHOW | Shows User games
+| URL | HTTP Verb | Action | Description |
+| ------- | ------ | ------ | ------ |
+| home | GET | SHOW | Shows Log In and Sign Up |
+| user/new | POST | CREATE | Create New User Account |
+| user/:id | GET | SHOW | Shows User Account |
+| user/league | GET | SHOW | Shows User leagues |
+| user/league/new | POST | CREATE | Create New League |
+| user/games | GET | SHOW | Shows User games |
 
 ### User Persona 1
 Retired, +70 year old who has worked with computers and is pretty tech savvy. Enjoys bowling in multiple leagues and wants a way to track individual game scores and/or view by league.
