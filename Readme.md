@@ -4,14 +4,14 @@ The Multiple Bowling League Score Tracker is an app that will provide one place 
 
 ## Entity Relationship Diagram
 ---
-!(https://i.imgur.com/z2tEJLn.png)
+![alt text](https://i.imgur.com/z2tEJLn.png)
 ## Technologies Used
 ---
   * HTML - CSS - Javascript - JQuery
 ## Wireframes
 ---
 ### Home Page
-![alt text] (https://i.imgur.com/H1bCMMK.png)
+![alt text]https://i.imgur.com/H1bCMMK.png
 ### By League Page
 
 ### By Game Page
