@@ -39,15 +39,15 @@ Person in their 30's, is familiar with computers and mobile apps. Would like a w
 ## MVP User Stories
 ---
 As a User I should be able to:
--- Log in or Sign in to view current and historical data
--- Enter in the name of the bowling alley and league I am part of
--- See my bowling average per league
--- Enter individual game score
--- See cumulative bowling average for all games
+- Log in or Sign in to view current and historical data
+- Enter in the name of the bowling alley and league I am part of
+- See my bowling average per league
+- Enter individual game score
+- See cumulative bowling average for all games
 
 ## Stretch Goals User Stories
 As a User I should be able to:
--- see a representation of my individual games (graph)
--- see a representation of my league scores (graph)
--- add league team members
--- add league team member scores
+- see a representation of my individual games (graph)
+- see a representation of my league scores (graph)
+- add league team members
+- add league team member scores
