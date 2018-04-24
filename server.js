@@ -4,29 +4,35 @@ console.log("server.js has launched");
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const path = require('path');
+// const router = express.Router();
 
 // creates a new express app called app
 const app = express();
-
 // connect to db models
-var db = require('./models');
-
-// generate a new express app and call it 'app'
-var app = express();
+const db = require('./models');
 
 // serve static files in public
 app.use(express.static('public'));
-
 // body parser config to accept our datatypes
 app.use(bodyParser.urlencoded({ extended: true }));
+// set up view engine
+app.set('views', path.join(__dirname, 'views'));
+app.use('view engine', 'ejs');
 
-// degines a root route to localhost:3000
-app.get('/', function (req, res) {
-  res.sendFile('views/index.html' , { root : __dirname});
+
+
+app.get('/home', function(req,res){
+	// here's a sample route
+  res.send({message: 'Home page coming soon'})
 });
 
+/* error handler */
+app.get('*', function(req, res) {
+  res.status(404).send({message: 'Oops! Not found.'});
+});
 
 // connects app to localhost on port 3000
 app.listen(process.env.PORT || 3000, function () {
-  console.log('Example app listening at http://localhost:3000/');
+  console.log('Server is listening at http://localhost:3000/');
 });
