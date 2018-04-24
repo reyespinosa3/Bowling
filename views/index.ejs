@@ -1,20 +1,35 @@
 <% include partials/header %>
 
 <header>
+  <button id="loginbtn">LogIn</button>
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="logIn" class="form" method="post">
+        LogIn:<br>
+        <input type="text" name="userName" value="" placeholder="Your User Name"><br>
+        <input type="text" name="userPassword" value="" placeholder="Your Password"><br>
+        <input type="submit" name="logIn" value="LogIn">
+      </form>
+    </div>
+  </div>
+    <button id="signinbtn">SignIn</button>
+    <div id="signinModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+          <form id="signUp" class="form" method="post">
+            SignUp:<br>
+            <input type="text" name="name" value="" placeholder="Enter Your Name"><br>
+            <input type="text" name="email" value="" placeholder="Your Email Address"><br>
+            <input type="text" name="password" value="" placeholder="Password"><br>
+            <input type="submit" value="SignUp">
+          </form>
+      </div>
+  </div>
+
   <aside class="rightSection">
-    <form id="signUp" class="form" method="post">
-      SignUp:<br>
-      <input type="text" name="name" value="" placeholder="Enter Your Name"><br>
-      <input type="text" name="email" value="" placeholder="Your Email Address"><br>
-      <input type="text" name="password" value="" placeholder="Password"><br>
-      <input type="submit" value="SignUp">
-    </form>
-    <form id="logIn" class="form" method="post">
-      LogIn:<br>
-      <input type="text" name="userName" value="" placeholder="Your User Name"><br>
-      <input type="text" name="userPassword" value="" placeholder="Your Password"><br>
-      <input type="submit" name="logIn" value="LogIn">
-    </form>
+
+
   </aside>
   <h1>Welcome to the Multiple Bowling Leagues Score Tracker</h1>
   <p>If you enjoy bowling and are a member of two or more leagues, this tool is for you!<br>
