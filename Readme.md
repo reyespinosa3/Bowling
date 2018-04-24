@@ -4,27 +4,34 @@ The Multiple Bowling League Score Tracker is an app that will provide one place 
 
 ## Entity Relationship Diagram
 ---
-![alt text] (https://i.imgur.com/z2tEJLn.png)
+![alt text](https://i.imgur.com/z2tEJLn.png)
+
 ## Technologies Used
 ---
   * HTML - CSS - Javascript - JQuery
+  * Node - Express - Mongodb - Mongo - Mongoose
+  
 ## Wireframes
 ---
 ### Home Page
-![alt text] (https://i.imgur.com/H1bCMMK.png)
+![alt text](https://i.imgur.com/H1bCMMK.png)
+
 ### By League Page
+![alt text](https://i.imgur.com/YgGDLtW.png)
 
 ### By Game Page
+![alt text](https://i.imgur.com/agpNX8X.png)
 
 ## Routes
 ---
-URL | HTTP Verb | Action | Description
-home | GET | SHOW | Shows Log In and Sign Up
-user/new | POST | CREATE | Create New User Account
-user/:id | GET | SHOW | Shows User Account
-user/league | GET | SHOW | Shows User leagues
-user/league/new | POST | CREATE | Create New League
-user/games | GET | SHOW | Shows User games
+| URL | HTTP Verb | Action | Description |
+| ------- | ------ | ------ | ------ |
+| home | GET | SHOW | Shows Log In and Sign Up |
+| user/new | POST | CREATE | Create New User Account |
+| user/:id | GET | SHOW | Shows User Account |
+| user/league | GET | SHOW | Shows User leagues |
+| user/league/new | POST | CREATE | Create New League |
+| user/games | GET | SHOW | Shows User games |
 
 ### User Persona 1
 Retired, +70 year old who has worked with computers and is pretty tech savvy. Enjoys bowling in multiple leagues and wants a way to track individual game scores and/or view by league.
@@ -38,15 +45,15 @@ Person in their 30's, is familiar with computers and mobile apps. Would like a w
 ## MVP User Stories
 ---
 As a User I should be able to:
--- Log in or Sign in to view current and historical data
--- Enter in the name of the bowling alley and league I am part of
--- See my bowling average per league
--- Enter individual game score
--- See cumulative bowling average for all games
+- Log in or Sign in to view current and historical data
+- Enter in the name of the bowling alley and league I am part of
+- See my bowling average per league
+- Enter individual game score
+- See cumulative bowling average for all games
 
 ## Stretch Goals User Stories
 As a User I should be able to:
--- see a representation of my individual games (graph)
--- see a representation of my league scores (graph)
--- add league team members
--- add league team member scores
+- see a representation of my individual games (graph)
+- see a representation of my league scores (graph)
+- add league team members
+- add league team member scores
