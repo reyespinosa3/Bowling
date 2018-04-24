@@ -1,25 +1,27 @@
 <% include partials/header %>
 
 <header>
+  <aside class="rightSection">
+    <form id="signUp" class="form" method="post">
+      SignUp:<br>
+      <input type="text" name="name" value="" placeholder="Enter Your Name"><br>
+      <input type="text" name="email" value="" placeholder="Your Email Address"><br>
+      <input type="text" name="password" value="" placeholder="Password"><br>
+      <input type="submit" value="SignUp">
+    </form>
+    <form id="logIn" class="form" method="post">
+      LogIn:<br>
+      <input type="text" name="userName" value="" placeholder="Your User Name"><br>
+      <input type="text" name="userPassword" value="" placeholder="Your Password"><br>
+      <input type="submit" name="logIn" value="LogIn">
+    </form>
+  </aside>
   <h1>Welcome to the Multiple Bowling Leagues Score Tracker</h1>
   <p>If you enjoy bowling and are a member of two or more leagues, this tool is for you!<br>
   Track your scores by League or by Game.</p>
-
-  <form id="logIn" class="form" method="post">
-    <input type="text" name="name" value="" placeholder="Enter Your Name">Name</input>
-    <input type="text" name="email" value="" placeholder="Your Email Address">Email</input>
-    <input type="text" name="password" value="" placeholder="Password">Password</input>
-    <button type="button" name="logInButton">Submit</button>
-  </form>
-  <form id="signIn" class="form" method="post">
-    <input type="text" name="userName" value="" placeholder="Your User Name">User Name</input>
-    <input type="text" name="userPassword" value="" placeholder="Your Password">Password</input>
-    <button type="button" name="signInbutton">Sign In</button>
-  </form>
 </header>
 
 <section>
-  <button id="byLeague" type="button" name="byLeague">By League</button>
-  <button id="byGame" type="button" name="byGame">By Game</button>
+  <img src="/images/bowlinghome.jpeg">
 </section>
 <% include partials/footer %>

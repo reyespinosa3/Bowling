@@ -1,0 +1,30 @@
+h1 {
+  text-align: center;
+  color: purple;
+}
+h3 {
+  text-align: center;
+  color: purple;
+}
+p {
+  text-align: center;
+  color: purple;
+  font-size: 24px;
+}
+section {
+  display: flex;
+  justify-content: center;
+}
+img {
+  height: 50%;
+  width: 50%;
+}
+aside {
+  position: fixed;
+  display: flex;
+  align-content: flex-end;
+}
+form {
+  border-width: 5px;
+  border-style: inset;
+}

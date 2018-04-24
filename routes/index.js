@@ -1,4 +1,3 @@
-console.log("index js in routes has been accessed");
 /* setting up router */
 const express = require('express');
 const indexRouter = express.Router();
@@ -9,3 +8,5 @@ indexRouter.get('/', function (req, res) {
 });
 
 module.exports = indexRouter;
+
+console.log("index js in routes has been accessed");

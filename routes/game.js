@@ -1,5 +1,3 @@
-console.log('game.js in routes has been accessed');
-
 const express = require('express');
 const gameRouter = express.Router();
 
@@ -9,3 +7,5 @@ gameRouter.get('/game', function (req, res) {
 });
 
 module.exports = gameRouter;
+
+console.log('game.js in routes has been accessed');

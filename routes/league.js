@@ -1,5 +1,3 @@
-console.log('league.js in routes has been accessed');
-
 const express = require('express');
 const leagueRouter = express.Router();
 
@@ -9,3 +7,4 @@ leagueRouter.get('/league', function (req, res) {
 });
 
 module.exports = leagueRouter;
+console.log('league.js in routes has been accessed');
