@@ -18,14 +18,21 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 // set up view engine
 app.set('views', path.join(__dirname, 'views'));
-app.use('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
+// importing index.js, league.js and game.js from routes folder
+const indexRoute = require('./routes/index');
+const leagueRoute = require('./routes/league');
+const gameRoute = require('./routes/game');
 
+app.use('/', indexRoute);
+app.use('/league', leagueRoute);
+app.use('/game', gameRoute);
 
-app.get('/home', function(req,res){
-	// here's a sample route
-  res.send({message: 'Home page coming soon'})
-});
+// app.get('/', function(req,res){
+// 	// here's a sample route
+//   res.send({message: 'Home page coming soon'})
+// });
 
 /* error handler */
 app.get('*', function(req, res) {
