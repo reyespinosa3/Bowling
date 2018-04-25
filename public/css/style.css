@@ -19,6 +19,9 @@ img {
   height: 50%;
   width: 50%;
 }
+.hidden {
+  display: none;
+}
 .modal {
     display: none;
     position: fixed;

@@ -22,18 +22,26 @@ app.set('view engine', 'ejs');
 
 // importing index.js, league.js and game.js from routes folder
 const indexRoute = require('./routes/index');
-const leagueRoute = require('./routes/league');
-const gameRoute = require('./routes/game');
+// const leagueRoute = require('./routes/league');
+// const gameRoute = require('./routes/game');
+// const userRoute = require('./routes/user');
 
 app.use('/', indexRoute);
-app.use('/league', leagueRoute);
-app.use('/game', gameRoute);
+// app.use('/league', leagueRoute);
+// app.use('/game', gameRoute);
+// app.use('/user', userRoute);
 
-// app.get('/', function(req,res){
-// 	// here's a sample route
-//   res.send({message: 'Home page coming soon'})
-// });
+app.get('/league', function (req, res) {
+  res.render('league.ejs');
+});
 
+app.get('/game', function (req, res) {
+  res.render('game.ejs');
+});
+
+app.get('/user', function (req, res) {
+  res.render('user.ejs');
+});
 /* error handler */
 app.get('*', function(req, res) {
   res.status(404).send({message: 'Oops! Not found.'});
@@ -41,5 +49,5 @@ app.get('*', function(req, res) {
 
 // connects app to localhost on port 3000
 app.listen(process.env.PORT || 3000, function () {
-  console.log('Server is listening at http://localhost:3000/');
+  console.log('Server is listening at localhost:3000');
 });
