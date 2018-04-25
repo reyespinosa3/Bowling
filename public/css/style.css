@@ -19,6 +19,12 @@ img {
   height: 50%;
   width: 50%;
 }
+button {
+  font-size: 24px;
+  border-width: medium;
+  border-radius: 5px;
+  border-style: outset;
+}
 .hidden {
   display: none;
 }

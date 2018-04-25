@@ -1,5 +1,40 @@
 <% include partials/header %>
+<body>
+  <header>
+    <button id="logInBtn">LogIn</button>
+    <div id="logInModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="logInForm" class="form" name="logIn" method="">
+          LogIn:<br>
+          <input id="logInUserName" type="text" name="userName" placeholder="Your User Name"><br>
+          <input id="logInPassword" type="text" name="userPassword" placeholder="Your Password"><br>
+          <input id="logInSubmitBtn" type="submit" name="logIn" value="LogIn">
+        </form>
+      </div>
+    </div>
+      <button id="signUpBtn">SignUp</button>
+      <div id="signUpModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+            <form id="signUpForm" class="form" name="signUp" method="">
+              SignUp:<br>
+              <input type="text" name="userName" placeholder="Enter A User Name"><br>
+              <input type="text" name="email" placeholder="Your Email Address"><br>
+              <input type="text" name="password" placeholder="Password"><br>
+              <input id="signUpSubmitBtn" type="submit" name="signUp" value="SignUp">
+            </form>
+        </div>
+    </div>
 
+    <aside class="rightSection">
+
+
+    </aside>
+    <h1>Welcome to the Multiple Bowling Leagues Score Tracker</h1>
+    <p>If you enjoy bowling and are a member of two or more leagues, this tool is for you!<br>
+    Track your scores by League or by Game.</p>
+  </header>
 <section>
   <img src="/images/bowlinghome.jpeg">
 </section>

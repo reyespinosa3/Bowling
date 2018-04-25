@@ -20,27 +20,32 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// importing index.js, league.js and game.js from routes folder
+
+// importing index.js from routes folder
 const indexRoute = require('./routes/index');
-// const leagueRoute = require('./routes/league');
-// const gameRoute = require('./routes/game');
-// const userRoute = require('./routes/user');
-
 app.use('/', indexRoute);
-// app.use('/league', leagueRoute);
-// app.use('/game', gameRoute);
-// app.use('/user', userRoute);
 
+// route for league page
 app.get('/league', function (req, res) {
-  res.render('league.ejs');
+  res.render('league.ejs', {
+    title: "My Leagues Page",
+    js: "/js/league.js"
+  });
 });
 
+//route for game page
 app.get('/game', function (req, res) {
-  res.render('game.ejs');
+  res.render('game.ejs', {
+    title: "My Games Page",
+    js: "/js/game.js"
+  });
 });
 
+// route for user page
 app.get('/user', function (req, res) {
-  res.render('user.ejs');
+  res.render('user.ejs', {
+    title: "My User Page"
+  });
 });
 /* error handler */
 app.get('*', function(req, res) {
