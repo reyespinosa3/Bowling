@@ -3,9 +3,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var GameSchema = new Schema ({
-  game1: String,
-  game2: String,
-  game3: String
+  week: Number,
+  game1: Number,
+  game2: Number,
+  game3: Number
 });
 
 var Game = mongoose.model('Game', GameSchema);

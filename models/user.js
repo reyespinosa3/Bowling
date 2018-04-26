@@ -5,12 +5,7 @@ var Schema = mongoose.Schema;
 var UserSchema = new Schema ({
   userName: String,
   userEmail: String,
-  userPassword: String,
-  leagueName: String,
-  leagueLocation: String,
-  game1: Number,
-  game2: Number,
-  game3: Number
+  userPassword: String
 });
 
 var User = mongoose.model('User', UserSchema);
