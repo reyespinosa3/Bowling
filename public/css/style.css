@@ -1,27 +1,31 @@
 body {
   background-image: url("/images/bowlinglanes.png");
-  background-repeat: no-repeat;
 }
 h1 {
   text-align: center;
   text-transform: capitalize;
-  text-shadow: 2px -2px black;
-  color: yellow;
+  text-shadow: 2px -2px white;
+  color: purple;
+  font-size: 34px;
+  width: auto;
 }
 h3 {
   text-align: center;
-  color: yellow;
+  color: purple;
   font-weight: 600;
+  font-size: 28px;
   text-transform: capitalize;
-  text-shadow: 2px -2px black;
+  text-shadow: 2px -2px white;
+  width: auto;
 }
 p {
   text-align: center;
   text-transform: capitalize;
-  text-shadow: 2px -2px black;
-  color: yellow;
+  text-shadow: 2px -2px white;
+  color: purple;
   font-size: 24px;
   font-weight: 600;
+  width: auto;
 }
 section {
   display: flex;
@@ -38,7 +42,7 @@ table {
   border-style: inset;
 }
 tr {
-  color: yellow;
+  color: purple;
   font-size: 20px;
   font-weight: 600;
 }

@@ -1,7 +1,6 @@
 
 var mongoose = require("mongoose");
 
-// mongoose.connect("mongodb://localhost/bowling");
 mongoose.connect("mongodb://localhost/bowling");
 
 module.exports.index = require('./index.js');

@@ -1,11 +1,11 @@
 var mongoose = require('mongoose');
+// mongoose.connect("mongodb://localhost/bowling");
 var Schema = mongoose.Schema;
 
 var GameSchema = new Schema ({
-  game1: Number,
-  game2: Number,
-  game3: Number,
-  seriesTotal: Number
+  game1: String,
+  game2: String,
+  game3: String
 });
 
 var Game = mongoose.model('Game', GameSchema);

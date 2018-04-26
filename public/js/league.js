@@ -12,6 +12,7 @@ $('#leagueCreateSubmitBtn').on('click', function (e) {
   leagueData.push(leagueDataForm);
   $('#createLeagueModal').attr("style", "display: none");
   console.log(leagueData);
+  createTable();
 })
 
 // Opens createLeague Modal
@@ -31,6 +32,9 @@ $(window).on('click', function(e) {
 
 
 // create view of Leagues
+const createTable = function() {
+  $('<tr><td>table row</td></tr>').appendTo('#viewLeagues');
+}
 
 // sends user to my games page
 const games = function () {

@@ -20,6 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// mongoose.connect('mongodb://localhost/bowling');
 
 // importing index.js from routes folder
 const indexRoute = require('./routes/index');
@@ -35,18 +36,37 @@ app.get('/league', function (req, res) {
 
 //route for game page
 app.get('/game', function (req, res) {
-  res.render('game.ejs', {
+  db.User.find(function(err, data) {
+    if (err) {
+      console.log("Problem with Server: " + err);
+      res.sendStatus(500);
+    }
+    // res.json(game);
+    res.render('game', {
+    data: data,
     title: "My Games Page",
     js: "/js/game.js"
   });
 });
+});
 
 // route for user page
 app.get('/user', function (req, res) {
-  res.render('user.ejs', {
-    title: "My User Page"
+  db.User.find(function(err, data){
+    if (err) {
+      console.log("Problem with Server: " + err);
+      res.sendStatus(500);
+    }
+    // res.json(data);
+    res.render('user', {
+      data: data,
+      title: "My User Page",
+      js: "/js/user.js"
+  });
   });
 });
+
+
 /* error handler */
 app.get('*', function(req, res) {
   res.status(404).send({message: 'Oops! Not found.'});

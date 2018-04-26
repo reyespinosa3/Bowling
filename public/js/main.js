@@ -13,6 +13,7 @@ $('#logInSubmitBtn').on('click', function(e) {
   e.preventDefault();
   let logInForm = $('#logInForm').serializeArray();
   $('#logInModal').attr("style", "display: none");
+  // window.location.replace("http://localhost:3000/league");
   console.log(logInForm);
 })
 
