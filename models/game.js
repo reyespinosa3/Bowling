@@ -2,9 +2,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var GameSchema = new Schema ({
-  gameOne: Number,
-  gameTwo: Number,
-  gameThree: Number,
+  game1: Number,
+  game2: Number,
+  game3: Number,
   seriesTotal: Number
 });
 

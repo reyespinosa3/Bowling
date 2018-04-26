@@ -5,20 +5,22 @@
 </section>
 
 <section>
-  <button id="createLeague" type="button" name="createLeague">Create New League</button>
+  <button id="createLeagueBtn" type="button" name="createLeague">Create New League</button>
   <div id="createLeagueModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <form id="leagueDataForm" class="form" name="leagueDataForm" method="">
-        LogIn:<br>
+        League Information:<br>
         <input id="leagueName" type="text" name="leagueName" placeholder="League Name"><br>
         <input id="locationName" type="text" name="leagueLocation" placeholder="Bowling Alley Name"><br>
         <input id="leagueCreateSubmitBtn" type="submit" name="leagueCreate" value="leagueCreate">
       </form>
     </div>
   </div>
-  <button id="gotoGames" type="button" name="gotoGames">Go To My Games</button>
+  <button id="gotoGames" type="button" name="gotoGames" onclick="games()">Go To My Games</button>
 </section>
 <h1>Your Leagues</h1>
+<section>
 
+</section>
 <% include partials/footer %>
