@@ -11,6 +11,7 @@ h1 {
 h3 {
   text-align: center;
   color: yellow;
+  font-weight: 600;
   text-transform: capitalize;
   text-shadow: 2px -2px black;
 }
@@ -20,6 +21,7 @@ p {
   text-shadow: 2px -2px black;
   color: yellow;
   font-size: 24px;
+  font-weight: 600;
 }
 section {
   display: flex;
@@ -30,6 +32,18 @@ button {
   border-width: medium;
   border-radius: 10px;
   border-style: outset;
+}
+table {
+  border: 3px 3px;
+  border-style: inset;
+}
+tr {
+  color: yellow;
+  font-size: 20px;
+  font-weight: 600;
+}
+td {
+  width: 30%;
 }
 .hidden {
   display: none;
