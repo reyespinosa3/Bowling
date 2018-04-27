@@ -28,15 +28,22 @@ app.use('/', indexRoute);
 
 // route for league page
 app.get('/league', function (req, res) {
-  res.render('league.ejs', {
+    db.League.find(function(err, data) {
+      if (err) {
+        console.log("Problem with Server: " + err);
+        res.sendStatus(500);
+    }
+    res.render('league', {
+    data: data,
     title: "My Leagues Page",
     js: "/js/league.js"
   });
 });
+});
 
 //route for game page
 app.get('/game', function (req, res) {
-  db.User.find(function(err, data) {
+  db.Game.find(function(err, data) {
     if (err) {
       console.log("Problem with Server: " + err);
       res.sendStatus(500);

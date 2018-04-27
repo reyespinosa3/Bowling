@@ -1,18 +1,26 @@
 <% include partials/header %>
 
-<h1>You made it to the game page</h1>
 <section>
   <h1>Your Games Are Listed Below</h1>
 </section>
 
 <section>
-  <h1>Game 1 =</h1><h1> <%= data[1].game1 %> </h1>
-</section>
-<section>
-  <h1>Game 2 =</h1><h1> <%= data[1].game2 %> </h1>
-</section>
-<section>
-  <h1>Game 3 =</h1><h1> <%= data[1].game3 %> </h1>
+  <table id="viewGames">
+    <tr>
+      <td>Game 1</td>
+      <td>|| Game 2 ||</td>
+      <td>Game 3</td>
+      <td>|| Series Total ||</td>
+      <td>Series Average</td>
+    </tr>
+    <tr>
+      <td><%= data[0].game1 %></td>
+      <td><%= data[0].game2 %></td>
+      <td><%= data[0].game3 %></td>
+      <td>Series Total</td>
+      <td>Series Average</td>
+    </tr>
+  </table>
 </section>
 
 <% include partials/footer %>

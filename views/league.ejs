@@ -1,10 +1,6 @@
 <% include partials/header %>
 
 <section>
-  <h1>Welcome! Here Is Your League Information</h1>
-</section>
-
-<section>
   <button id="createLeagueBtn" type="button" name="createLeague">Create New League</button>
   <div id="createLeagueModal" class="modal">
     <div class="modal-content">
@@ -19,15 +15,19 @@
   </div>
   <button id="gotoGames" type="button" name="gotoGames" onclick="games()">Go To My Games</button>
 </section>
-<h1>Your Leagues</h1>
+
 <section>
-  <h1>League Name</h1>
+  <h1>Welcome! Here Is Your League Information</h1>
+</section>
+<section>
+  <p>League Name: <%= data[0].leagueName %> </br>
+  League Location: <%= data[0].leagueLocation %> </p>
 </section>
 <section>
   <table id="viewLeagues">
     <tr>
       <td>Week Number</td>
-      <td>Series Total</td>
+      <td>|| Series Total ||</td>
       <td>Series Average</td>
     </tr>
   </table>

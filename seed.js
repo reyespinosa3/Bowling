@@ -6,12 +6,12 @@ var bowlers = [
   {
     userName: "Rey Espinosa",
     userEmail: "reynaldo.espinosa.iii@gmail.com",
-    userPassword: "bowler01"
+    passwordDigest: "bowler01"
   },
   {
     userName: "John Doe",
     userEmail: "johndoe@myserver.com",
-    userPassword: "bowler02"
+    passwordDigest: "bowler2"
   }
 ];
 
