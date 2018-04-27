@@ -1,15 +1,14 @@
-/* setting up router */
 const express = require('express');
-const indexRouter = express.Router();
+const indexRoute = express.Router();
 
-// designates a root route to localhost:3000
-indexRouter.get('/', function (req, res) {
+// designates a route to index page
+indexRoute.get('/', function (req, res) {
   res.render('index.ejs', {
     title: "Multiple Bowling League Tracker",
     js: "/js/main.js"
   });
 });
 
-module.exports = indexRouter;
+module.exports = indexRoute;
 
 console.log("index js in routes has been accessed");

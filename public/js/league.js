@@ -3,16 +3,16 @@ console.log("league.js in js is ready");
 let createLeagueModal = $('createLeagueModal');
 let createLeagueBtn = $('createLeagueBtn');
 let createLeagueSpan = $('close')[0];
-let leagueData = [];
+// let leagueData = [];
 
 //code to post createLeague info to database
 $('#leagueCreateSubmitBtn').on('click', function (e) {
   e.preventDefault();
   let leagueDataForm = $('#leagueDataForm').serializeArray();
-  leagueData.push(leagueDataForm);
+  // leagueData.push(leagueDataForm);
   $('#createLeagueModal').attr("style", "display: none");
-  console.log(leagueData);
-  createTable();
+  // console.log(leagueData);
+  // createTable();
 })
 
 // Opens createLeague Modal

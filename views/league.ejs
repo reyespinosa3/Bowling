@@ -1,18 +1,18 @@
 <% include partials/header %>
 
 <section>
-  <button id="createLeagueBtn" type="button" name="createLeague">Create New League</button>
-  <div id="createLeagueModal" class="modal">
+  <button id="createLeagueBtn" href="/newleague" type="button" name="createLeague">Create New League</button>
+  <!-- <div id="createLeagueModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <form id="leagueDataForm" class="form" name="leagueDataForm" method="">
+      <form id="leagueDataForm" class="form" name="leagueDataForm" action="/league" method="POST">
         League Information:<br>
         <input id="leagueName" type="text" name="leagueName" placeholder="League Name"><br>
         <input id="locationName" type="text" name="leagueLocation" placeholder="Bowling Alley Name"><br>
         <input id="leagueCreateSubmitBtn" type="submit" name="leagueCreate" value="leagueCreate">
       </form>
     </div>
-  </div>
+  </div> -->
   <button id="gotoGames" type="button" name="gotoGames" onclick="games()">Go To My Games</button>
 </section>
 

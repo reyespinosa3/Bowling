@@ -5,7 +5,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
-// const router = express.Router();
+// const route = express.Router();
 
 // creates a new express app called app
 const app = express();
@@ -20,59 +20,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// mongoose.connect('mongodb://localhost/bowling');
-
 // importing index.js from routes folder
 const indexRoute = require('./routes/index');
+const leagueRoute = require('./routes/league');
+const gameRoute = require('./routes/game');
+const newleagueRoute = require('./routes/newleague');
 app.use('/', indexRoute);
-
-// route for league page
-app.get('/league', function (req, res) {
-    db.League.find(function(err, data) {
-      if (err) {
-        console.log("Problem with Server: " + err);
-        res.sendStatus(500);
-    }
-    res.render('league', {
-    data: data,
-    title: "My Leagues Page",
-    js: "/js/league.js"
-  });
-});
-});
-
-//route for game page
-app.get('/game', function (req, res) {
-  db.Game.find(function(err, data) {
-    if (err) {
-      console.log("Problem with Server: " + err);
-      res.sendStatus(500);
-    }
-    // res.json(game);
-    res.render('game', {
-    data: data,
-    title: "My Games Page",
-    js: "/js/game.js"
-  });
-});
-});
-
-// route for user page
-app.get('/user', function (req, res) {
-  db.User.find(function(err, data){
-    if (err) {
-      console.log("Problem with Server: " + err);
-      res.sendStatus(500);
-    }
-    // res.json(data);
-    res.render('user', {
-      data: data,
-      title: "My User Page",
-      js: "/js/user.js"
-  });
-  });
-});
-
+app.use('/league', leagueRoute);
+app.use('/game', gameRoute);
+app.use('/newleague', newleagueRoute);
 
 /* error handler */
 app.get('*', function(req, res) {

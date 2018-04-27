@@ -1,10 +1,21 @@
 const express = require('express');
-const userRouter = express.Router();
+const userRoute = express.Router();
 
-// designates a root route to localhost:3000
-userRouter.get('/user', function (req, res) {
-  res.render('user.ejs');
+// route for user page
+userRoute.get('/user', function (req, res) {
+  db.User.find(function(err, data){
+    if (err) {
+      console.log("Problem with Server: " + err);
+      res.sendStatus(500);
+    }
+    // res.json(data);
+    res.render('user', {
+      data: data,
+      title: "My User Page",
+      js: "/js/user.js"
+  });
+  });
 });
 
-module.exports = userRouter;
+module.exports = userRoute;
 console.log('user.js in routes has been accessed');

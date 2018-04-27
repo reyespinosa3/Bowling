@@ -4,8 +4,8 @@
     <button id="logInBtn">Log In</button>
     <div id="logInModal" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <form id="logInForm" class="form" name="logIn" method="">
+        <span id="logInSpan" class="close">&times;</span>
+        <form id="logInForm" class="form" name="logIn" method="POST">
           Log In:<br>
           <input id="logInUserName" type="text" name="userName" placeholder="Your User Name"><br>
           <input id="logInPassword" type="text" name="userPassword" placeholder="Your Password"><br>
@@ -16,8 +16,8 @@
     <button id="signUpBtn">Sign Up</button>
     <div id="signUpModal" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
-          <form id="signUpForm" class="form" name="signUp" method="">
+        <span id="signUpSpan" class="close">&times;</span>
+          <form id="signUpForm" class="form" name="signUp" method="POST">
             Sign Up:<br>
             <input type="text" name="userName" placeholder="Enter A User Name"><br>
             <input type="text" name="email" placeholder="Your Email Address"><br>

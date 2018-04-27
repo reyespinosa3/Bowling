@@ -3,12 +3,12 @@ console.log("main.js is ready to go!");
 let logInModal = $('logInModal');
 let logInBtn = $('logInBtn');
 let logInSpan = $('close')[0];
-let signInModal = $('signInModal');
-let signInBtn = $('signInBtn');
-let signInSpan = $('close')[0];
-let userData = [];
+let signUpModal = $('signUpModal');
+let signUpBtn = $('signUpBtn');
+let signUpSpan = $('close')[0];
+let signUpData = [];
 
-// code to post LogIn info to database
+// code to handle LogIn modal
 $('#logInSubmitBtn').on('click', function(e) {
   e.preventDefault();
   let logInForm = $('#logInForm').serializeArray();
@@ -17,11 +17,11 @@ $('#logInSubmitBtn').on('click', function(e) {
   console.log(logInForm);
 })
 
-// code to post SignIn info to database
+// code to handle SignUp modal
 $('#signUpSubmitBtn').on('click', function(e) {
   e.preventDefault();
   let signUpForm = $('#signUpForm').serializeArray();
-  userData.push(signUpForm);
+  signUpData.push(signUpForm);
   $('#signUpModal').attr("style", "display: none");
   // window.location.replace("http://localhost:3000/league");
   console.log(userData);
