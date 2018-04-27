@@ -14,11 +14,11 @@
       <td>Series Average</td>
     </tr>
     <tr>
-      <td>Game 1 data</td>
-      <td>Game 2 data</td>
-      <td>Game 3 data</td>
-      <td>Series Total</td>
-      <td>Series Average</td>
+      <td><%= data[data.length - 1].game1 %></td>
+      <td><%= data[data.length - 1].game2 %></td>
+      <td><%= data[data.length - 1].game3 %></td>
+      <td><%= data[data.length - 1].game1 + data[data.length - 1].game2 + data[data.length - 1].game3 %></td>
+      <td><%= (data[data.length - 1].game1 + data[data.length - 1].game2 + data[data.length - 1].game3)/3 %></td>
     </tr>
   </table>
 </section>

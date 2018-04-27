@@ -2,15 +2,7 @@ const express = require('express');
 const leagueRoute = express.Router();
 const db = require('../models');
 
-// designates a route to league
-// leagueRoute.get('/', function (req, res) {
-//   res.render('league.ejs', {
-//     title: "Multiple Bowling League Tracker",
-//     js: "/js/main.js"
-//   });
-// });
-
-// routes used to get data from mongodb
+// route used to get data from mongodb
 leagueRoute.get('/', function (req, res) {
     db.League.find(function(err, data) {
       if (err) {

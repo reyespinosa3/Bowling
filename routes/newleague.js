@@ -19,17 +19,5 @@ newleagueRoute.post('/', function(req, res){
   })
 });
 
-// newleagueRoute.post('/', function(req, res) {
-//   db.League.create(req.body, function(err, newlycreatedleague) {
-//     if (err) {
-//       console.log("Problem with Server: " + err);
-//       res.sendStatus(500);
-//     }
-//     console.log("New League Added to Dabase");
-//   });
-//   res.redirect('/league')
-// });
-
-
 module.exports = newleagueRoute;
 console.log('newleague.js in routes has been accessed');
