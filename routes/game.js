@@ -2,14 +2,6 @@ const express = require('express');
 const gameRoute = express.Router();
 const db = require('../models');
 
-//route for game page
-// gameRoute.get('/', function (req, res) {
-//   res.render('game.ejs', {
-//     title: "Multiple Bowling League Tracker",
-//     js: "/js/main.js"
-//   });
-// });
-
 gameRoute.get('/', function (req, res) {
   db.Game.find(function(err, data) {
     if (err) {

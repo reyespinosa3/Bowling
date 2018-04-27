@@ -48,6 +48,7 @@ section {
   border-color: black;
   color: white;
   background-color: grey;
+  text-decoration: none;
 }
 #signUpBtn, #gotoGames {
   float:right;
@@ -59,6 +60,17 @@ section {
   border-color: black;
   color: white;
   background-color: grey;
+  text-decoration: none;
+}
+#newGames {
+  font-size: 24px;
+  border-width: medium;
+  border-radius: 10px;
+  border-style: outset;
+  border-color: black;
+  color: white;
+  background-color: grey;
+  text-decoration: none;
 }
 table {
   border: 3px 3px;
@@ -71,6 +83,10 @@ tr {
   color: purple;
   font-size: 20px;
   font-weight: 600;
+}
+td {
+  border-width: 2px;
+  border-style: solid;
 }
 .hidden {
   display: none;
