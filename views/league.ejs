@@ -1,27 +1,18 @@
 <% include partials/header %>
 
 <section>
-  <button id="createLeagueBtn" href="/newleague" type="button" name="createLeague">Create New League</button>
-  <!-- <div id="createLeagueModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <form id="leagueDataForm" class="form" name="leagueDataForm" action="/league" method="POST">
-        League Information:<br>
-        <input id="leagueName" type="text" name="leagueName" placeholder="League Name"><br>
-        <input id="locationName" type="text" name="leagueLocation" placeholder="Bowling Alley Name"><br>
-        <input id="leagueCreateSubmitBtn" type="submit" name="leagueCreate" value="leagueCreate">
-      </form>
-    </div>
-  </div> -->
-  <button id="gotoGames" type="button" name="gotoGames" onclick="games()">Go To My Games</button>
+  <a href="/newleague" id="createNewLeagueBtn">Create New League</a>
+  <a href="/game" id="gotoGames">Go To Games</a>
+  <!-- <button id="createNewLeagueBtn" href="/newleague" type="button" name="createNewLeagueBtn">Create New League</button> -->
+  <!-- <button id="gotoGames" href="/game" type="button" name="gotoGames">Go To My Games</button> -->
 </section>
 
 <section>
   <h1>Welcome! Here Is Your League Information</h1>
 </section>
 <section>
-  <p>League Name: <%= data[0].leagueName %> </br>
-  League Location: <%= data[0].leagueLocation %> </p>
+  <p>League Name: <%= data[data.length - 1].leagueName %> </br>
+  League Location: <%= data[data.length - 1].leagueLocation %> </p>
 </section>
 <section>
   <table id="viewLeagues">

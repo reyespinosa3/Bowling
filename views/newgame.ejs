@@ -1,3 +1,11 @@
 <% include partials/header %>
 
+<form id="newGameForm" class="form" name="newGameForm" action="/game" method="POST">
+  League Information:<br>
+  <input id="game1Total" type="text" name="game1total" placeholder="Game 1 Total"><br>
+  <input id="game2Total" type="text" name="game2total" placeholder="Game 2 Total"><br>
+  <input id="game3Total" type="text" name="game3total" placeholder="Game 3 Total"><br>
+  <input id="gameCreateSubmitBtn" type="submit" name="gameCreate" value="gameCreate">
+</form>
+
 <% include partials/footer %>

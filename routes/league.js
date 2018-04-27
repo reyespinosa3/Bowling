@@ -25,26 +25,5 @@ leagueRoute.get('/', function (req, res) {
 });
 });
 
-// leagueRoute.post('/', function(req, res) {
-//   let league = req.body.leagueName;
-//   let location = req.body.locationName;
-//   let newLeague = {
-//     leagueName: league,
-//     leagueLocation: location
-//   };
-//
-// console.log(league);
-// console.log(location);
-// console.log(newLeague);
-//
-//   db.League.create(newLeague, function(err, newlycreatedleague) {
-//     if (err) {
-//       console.log("Problem with Server: " + err);
-//       res.sendStatus(500);
-//     }
-//     console.log("New League Added to Dabase");
-//   });
-// });
-
 module.exports = leagueRoute;
 console.log('league.js in routes has been accessed');
