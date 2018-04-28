@@ -26,11 +26,15 @@ const leagueRoute = require('./routes/league');
 const gameRoute = require('./routes/game');
 const newleagueRoute = require('./routes/newleague');
 const newgameRoute = require('./routes/newgame');
+const signupRoute = require('./routes/signup');
+const loginRoute = require('./routes/login');
 app.use('/', indexRoute);
 app.use('/league', leagueRoute);
 app.use('/game', gameRoute);
 app.use('/newleague', newleagueRoute);
 app.use('/newgame', newgameRoute);
+app.use('/signup', signupRoute);
+app.use('/login', loginRoute);
 
 /* error handler */
 app.get('*', function(req, res) {
