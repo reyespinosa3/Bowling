@@ -11,4 +11,4 @@ indexRoute.get('/', function (req, res) {
 
 module.exports = indexRoute;
 
-console.log("index js in routes has been accessed");
+console.log("index.js in routes has been accessed");

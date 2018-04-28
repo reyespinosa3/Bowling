@@ -4,7 +4,7 @@ const db = require('../models');
 
 loginRoute.get('/', function (req, res) {
   res.render('login.ejs', {
-    title: "Multiple Bowling League Tracker",
+    title: "Log In Page",
     js: "/js/login.js"
   });
 });
