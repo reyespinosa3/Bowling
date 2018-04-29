@@ -1,11 +1,13 @@
 console.log("server.js has launched");
 
 // app requires the following dependencies
-const express    = require('express');
-const bodyParser = require('body-parser');
-const mongoose   = require('mongoose');
-const path       = require('path');
-const bcrypt     = require('bcrypt');
+const express      = require('express');
+const bodyParser   = require('body-parser');
+const mongoose     = require('mongoose');
+const path         = require('path');
+const bcrypt       = require('bcrypt');
+const cookieParser = require('cookie-parser');
+const session      = require('express-session');
 // const route = express.Router();
 
 // creates a new express app called app
@@ -13,16 +15,21 @@ const app = express();
 // connect to db models
 const db = require('./models');
 
+// to use cookieParser
+app.use(cookieParser());
+// to use sessions
+app.use(session({secret: 'my favorite dog', saveUninitialized: true, resave: true}));
 // serve static files in public
 app.use(express.static('public'));
 // body parser config to accept our datatypes
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 // set up view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// importing index.js from routes folder
+// to use routes from routes folder
 const indexRoute     = require('./routes/index');
 const leagueRoute    = require('./routes/league');
 const gameRoute      = require('./routes/game');

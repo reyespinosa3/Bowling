@@ -1,3 +1,4 @@
+
 const express     = require('express');
 const signupRoute = express.Router();
 const db          = require('../models');
@@ -12,13 +13,25 @@ signupRoute.get('/', function (req, res) {
 });
 
 signupRoute.post('/', function(req, res) {
-  db.User.create(req.body, function(err) {
-    if (err) {
-      console.log(err);
-    } else {
-      res.redirect('/game');
-    }
+  let userName = req.body.userName;
+  let userEmail = req.body.userEmail;
+  console.log(userName);
+  console.log(userEmail);
+  console.log(req.body.password);
+  bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
+    let user = new db.User({userName: userName, userEmail: userEmail, password: hash});
+    db.User.create(user).then(function() {
+      console.log("new user created", userName);
+      res.redirect('/league')
+    })
   })
+  // db.User.create(req.body, function(err) {
+  //   if (err) {
+  //     console.log(err);
+  //   } else {
+  //     res.redirect('/game');
+  //   }
+  // })
 })
 
 // signupRoute.post('/', function(req, res){
