@@ -37,10 +37,12 @@ p {
 section {
   display: flex;
   justify-content: center;
+  /* align-items: center; */
 }
 #logInBtn, #createNewLeagueBtn {
-  float:left;
-  margin-left: 150px;
+  /* float:left; */
+  align-items: center;
+  /* margin-left: 150px; */
   font-size: 24px;
   border-width: medium;
   border-radius: 10px;
@@ -50,9 +52,10 @@ section {
   background-color: grey;
   text-decoration: none;
 }
-#signUpBtn, #gotoGames {
-  float:right;
-  margin-right: 150px;
+#signUpBtn, #gotoGames, #logout {
+  /* float:right; */
+  align-items: center;
+  /* margin-right: 150px; */
   font-size: 24px;
   border-width: medium;
   border-radius: 10px;

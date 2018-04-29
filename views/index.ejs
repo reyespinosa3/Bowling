@@ -1,32 +1,9 @@
 <% include partials/header %>
 
-  <header>
-    <button id="logInBtn">Log In</button>
-    <div id="logInModal" class="modal">
-      <div class="modal-content">
-        <span id="logInSpan" class="close">&times;</span>
-        <form id="logInForm" class="form" name="logIn" method="POST">
-          Log In:<br>
-          <input id="logInUserName" type="text" name="userName" placeholder="Your User Name"><br>
-          <input id="logInPassword" type="text" name="userPassword" placeholder="Your Password"><br>
-          <input id="logInSubmitBtn" type="submit" name="logIn" value="LogIn">
-        </form>
-      </div>
-    </div>
-    <button id="signUpBtn">Sign Up</button>
-    <div id="signUpModal" class="modal">
-      <div class="modal-content">
-        <span id="signUpSpan" class="close">&times;</span>
-          <form id="signUpForm" class="form" name="signUp" method="POST">
-            Sign Up:<br>
-            <input type="text" name="userName" placeholder="Enter A User Name"><br>
-            <input type="text" name="email" placeholder="Your Email Address"><br>
-            <input type="text" name="password" placeholder="Password"><br>
-            <input id="signUpSubmitBtn" type="submit" name="signUp" value="SignUp">
-          </form>
-      </div>
-    </div>
-    </header>
+  <section>
+    <a href="/login" id="logInBtn">Log In</a>
+    <a href="/signup" id="signUpBtn">Sign Up</a>
+  </section>
   <section>
     <h1>Welcome to the Multiple Bowling Leagues Score Tracker</h1>
   </section>

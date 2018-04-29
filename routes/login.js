@@ -1,6 +1,8 @@
 const express = require('express');
 const loginRoute = express.Router();
 const db = require('../models');
+const bcrypt      = require('bcrypt');
+const saltRounds  = 10;
 
 loginRoute.get('/', function (req, res) {
   res.render('login.ejs', {
@@ -9,14 +11,31 @@ loginRoute.get('/', function (req, res) {
   });
 });
 
-loginRoute.post('/', function(req, res){
-  db.User.create(req.body, function(err) {
-    if (err) {
-      console.log(err);
-    } else {
-      res.redirect('/league');
-    }
-  })
+loginRoute.post('/', (req, res) => {
+	let username = req.body.userName;
+	let enteredPassword = req.body.password;
+
+	db.User.findOne({userName: username}, function(err, user) {
+    console.log(user);
+    if(user) {
+			bcrypt.compare(enteredPassword, user.password, (err, result) => {
+        if(err) {
+					console.log("Incorrect password!");
+          // req.session.user = user;
+          res.redirect('/login');
+				};
+				if(result) {
+					console.log("Logged in!");
+					res.redirect('/league');
+				}
+			})
+		};
+		if(err){
+			console.log(err);
+			res.redirect('/leauge');
+		}
+    });
+
 });
 
 module.exports = loginRoute;

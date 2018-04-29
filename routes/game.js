@@ -8,7 +8,7 @@ gameRoute.get('/', function (req, res) {
       console.log("Problem with Server: " + err);
       res.sendStatus(500);
     }
-    // res.json(game);
+    // req.session.user = user;
     res.render('game', {
     data: data,
     title: "My Games Page",

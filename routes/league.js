@@ -9,10 +9,11 @@ leagueRoute.get('/', function (req, res) {
         console.log("Problem with Server: " + err);
         res.sendStatus(500);
     }
+    // req.session.user = user;
     res.render('league', {
     data: data,
     title: "My Leagues Page",
-    js: "/js/league.js"
+    js: "/js/game.js"
   });
 });
 });

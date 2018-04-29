@@ -18,7 +18,10 @@ const db = require('./models');
 // to use cookieParser
 app.use(cookieParser());
 // to use sessions
-app.use(session({secret: 'my favorite dog', saveUninitialized: true, resave: true}));
+app.use(session({
+  secret: 'my favorite dog',
+  saveUninitialized: true,
+  resave: true}));
 // serve static files in public
 app.use(express.static('public'));
 // body parser config to accept our datatypes
@@ -44,6 +47,13 @@ app.use('/newleague', newleagueRoute);
 app.use('/newgame', newgameRoute);
 app.use('/signup', signupRoute);
 app.use('/login', loginRoute);
+
+// log out route
+app.get('/logout', (req,res) => {
+	console.log(req.session)
+	req.session.user = null;
+	res.redirect('/')
+})
 
 /* error handler */
 app.get('*', function(req, res) {
