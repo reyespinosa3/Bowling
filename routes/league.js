@@ -5,6 +5,7 @@ const db = require('../models');
 // route used to get data from mongodb
 leagueRoute.get('/', function (req, res) {
     db.League.find(function(err, data) {
+      console.log(data);
       if (err) {
         console.log("Problem with Server: " + err);
         res.sendStatus(500);
@@ -13,7 +14,7 @@ leagueRoute.get('/', function (req, res) {
     res.render('league', {
     data: data,
     title: "My Leagues Page",
-    js: "/js/game.js"
+    js: "/js/main.js"
   });
 });
 });

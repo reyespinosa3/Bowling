@@ -4,15 +4,15 @@ const db = require('../models');
 
 gameRoute.get('/', function (req, res) {
   db.Game.find(function(err, data) {
+    console.log(data);
     if (err) {
       console.log("Problem with Server: " + err);
       res.sendStatus(500);
     }
-    // req.session.user = user;
     res.render('game', {
     data: data,
     title: "My Games Page",
-    js: "/js/game.js"
+    js: "/js/main.js"
   });
 });
 });

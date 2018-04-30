@@ -2,24 +2,26 @@
 
 <section>
   <a href="/newleague" id="createNewLeagueBtn">Create New League</a>
-  <a href="/game" id="gotoGames">Go To Games</a>
+  <a href="/game" id="gotoGames">View Your Games</a>
   <a href="/logout" id="logout">Log Out</a>
 </section>
 
 <section>
   <h1>Welcome! Here Is Your League Information</h1>
 </section>
+
 <section>
-  <p>League Name: <%= data[data.length - 1].leagueName %> </br>
-  League Location: <%= data[data.length - 1].leagueLocation %> </p>
-</section>
-<section>
-  <table id="viewLeagues">
-    <tr>
-      <td>Week #</td>
-      <td>Series Total</td>
-      <td>Series Average</td>
-    </tr>
+  <table>
+    <% data.forEach(function(data) { %>
+      <tr>
+        <td>League Name: <%= data.leagueName %></td>
+      </tr>
+      <tr>
+        <td>League Location: <%= data.leagueLocation %></td>
+      </tr>
+    <% }); %>
   </table>
 </section>
+
+
 <% include partials/footer %>

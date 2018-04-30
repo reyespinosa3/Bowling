@@ -4,12 +4,14 @@
   <h1>Your Games Are Listed Below</h1>
 </section>
 <section>
+  <a href="/league" id="newGames">Return To Leagues</a>
   <a href="/newgame" id="newGames">Enter New Games</a>
   <a href="/logout" id="logout">Log Out</a>
 </section>
 <section>
   <table id="viewGames">
     <tr>
+      <td>Week #</td>
       <td>Game 1</td>
       <td>Game 2</td>
       <td>Game 3</td>
@@ -17,12 +19,15 @@
       <td>Series Average</td>
     </tr>
     <tr>
-      <td><%= data[data.length - 1].game1 %></td>
-      <td><%= data[data.length - 1].game2 %></td>
-      <td><%= data[data.length - 1].game3 %></td>
-      <td><%= data[data.length - 1].game1 + data[data.length - 1].game2 + data[data.length - 1].game3 %></td>
-      <td><%= (data[data.length - 1].game1 + data[data.length - 1].game2 + data[data.length - 1].game3)/3 %></td>
+    <% data.forEach(function(data){ %>
+      <td><%= data.weekNumber %></td>
+      <td><%= data.game1 %></td>
+      <td><%= data.game2 %></td>
+      <td><%= data.game3 %></td>
+      <td><%= data.game1 + data.game2 + data.game3 %></td>
+      <td><%= (data.game1 + data.game2 + data.game3)/3 %></td>
     </tr>
+      <% }); %>
   </table>
 </section>
 

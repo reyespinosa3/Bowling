@@ -50,7 +50,6 @@ app.use('/login', loginRoute);
 
 // log out route
 app.get('/logout', (req,res) => {
-	console.log(req.session)
 	req.session.user = null;
 	res.redirect('/')
 })

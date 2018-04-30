@@ -25,7 +25,7 @@ h3 {
   text-shadow: 2px -2px white;
   width: auto;
 }
-p {
+p, li {
   text-align: center;
   text-transform: capitalize;
   text-shadow: 2px -2px white;

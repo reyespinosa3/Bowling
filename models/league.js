@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-// mongoose.connect("mongodb://localhost/bowling");
 var Schema = mongoose.Schema;
 
 var LeagueSchema = new Schema ({
