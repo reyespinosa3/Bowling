@@ -1,6 +1,6 @@
 console.log("server.js has launched");
 
-// mongodb://<dbuser>:<dbpassword>@ds263639.mlab.com:63639/leaguetracker
+
 
 // app requires the following dependencies
 const express      = require('express');
@@ -24,6 +24,14 @@ app.use(session({
   secret: 'my favorite dog',
   saveUninitialized: true,
   resave: true}));
+
+if (process.env.NODE_ENV == "production") {
+  mongoose.connect(process.env.MLAB_URL)
+} else {
+  mongoose.connect('mongodb://localhost/bowling');
+}
+
+
 // serve static files in public
 app.use(express.static('public'));
 // body parser config to accept our datatypes
