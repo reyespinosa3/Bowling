@@ -47,9 +47,10 @@ Person in their 30's, is familiar with computers and mobile apps. Would like a w
 As a User I should be able to:
 - Log in or Sign in to view current and historical data
 - Enter in the name of the bowling alley and league I am part of
-- See my bowling average per league
 - Enter individual game score
-- See cumulative bowling average for all games
+- See game scores
+- See game series total
+- See series average
 
 ## Stretch Goals User Stories
 As a User I should be able to:
@@ -57,3 +58,5 @@ As a User I should be able to:
 - see a representation of my league scores (graph)
 - add league team members
 - add league team member scores
+- create embedded relationship between user, leagues and games
+- add multiple leagues
