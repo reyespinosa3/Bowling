@@ -1,6 +1,6 @@
 console.log("server.js has launched");
 
-
+var port = process.env.PORT || 3000
 
 // app requires the following dependencies
 const express      = require('express');
