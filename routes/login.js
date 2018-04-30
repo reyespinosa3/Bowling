@@ -21,7 +21,6 @@ loginRoute.post('/', (req, res) => {
 			bcrypt.compare(enteredPassword, user.password, (err, result) => {
         if(err) {
 					console.log("Incorrect password!");
-          // req.session.user = user;
           res.redirect('/login');
 				};
 				if(result) {
@@ -29,10 +28,9 @@ loginRoute.post('/', (req, res) => {
 					res.redirect('/league');
 				}
 			})
-		};
-		if(err){
-			console.log(err);
-			res.redirect('/leauge');
+		} else {
+			console.log("No User Found");
+			res.redirect('/');
 		}
     });
 

@@ -1,5 +1,7 @@
 console.log("server.js has launched");
 
+// mongodb://<dbuser>:<dbpassword>@ds263639.mlab.com:63639/leaguetracker
+
 // app requires the following dependencies
 const express      = require('express');
 const bodyParser   = require('body-parser');
