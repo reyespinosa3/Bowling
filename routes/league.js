@@ -5,7 +5,6 @@ const db = require('../models');
 // route used to get data from mongodb
 leagueRoute.get('/', function (req, res) {
     db.League.find(function(err, data) {
-      console.log(data);
       if (err) {
         console.log("Problem with Server: " + err);
         res.sendStatus(500);

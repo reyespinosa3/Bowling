@@ -1,6 +1,6 @@
 console.log("server.js has launched");
 
-var port = process.env.PORT || 5000
+var port = process.env.PORT || 3000
 
 // app requires the following dependencies
 const express      = require('express');
@@ -70,6 +70,6 @@ app.get('*', function(req, res) {
 });
 
 // connects app to localhost on port 3000
-app.listen(process.env.PORT || 5000, function () {
-  console.log('Server is listening at localhost:3000');
+app.listen(process.env.PORT || 3000, function () {
+  console.log('Server is listening at localhost:' + port);
 });
