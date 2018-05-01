@@ -46,7 +46,7 @@ Person in their 30's, is familiar with computers and mobile apps. Would like a w
 ## MVP User Stories
 ---
 As a User I should be able to:
-- Log in or Sign in to view current and historical data
+- Log in or Sign in to view current leage and game data
 - Enter in the name of the bowling alley and league I am part of
 - Enter individual game score
 - See game scores
@@ -61,3 +61,6 @@ As a User I should be able to:
 - add league team member scores
 - create embedded relationship between user, leagues and games
 - add multiple leagues
+- graph historical data
+- enter data per frame
+- select multiple bowling balls per frame
